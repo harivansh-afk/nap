@@ -1,0 +1,10 @@
+[package]
+name = "nap-proto"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Wire types for the nap control plane"
+
+[dependencies]
+serde.workspace = true

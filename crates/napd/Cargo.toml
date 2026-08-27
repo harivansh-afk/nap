@@ -1,0 +1,13 @@
+[package]
+name = "napd"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "nap receiver daemon: owns the kiosk, the panel, and the session lease"
+
+[dependencies]
+nap-proto = { path = "../nap-proto" }
+serde.workspace = true
+serde_json.workspace = true
+tiny_http = "0.12"

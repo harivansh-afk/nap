@@ -1,0 +1,18 @@
+[package]
+name = "nap"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Not AirPlay(tm): cast a mac onto a linux box's monitor"
+
+[dependencies]
+nap-proto = { path = "../nap-proto" }
+serde.workspace = true
+serde_json.workspace = true
+toml = "0.8"
+ureq = { version = "2", default-features = false, features = ["json"] }
+
+[target.'cfg(target_os = "macos")'.dependencies]
+core-graphics = "0.25"
+core-foundation = "0.10"

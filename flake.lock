@@ -1,0 +1,44 @@
+{
+  "nodes": {
+    "deskpad-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1772284464,
+        "narHash": "sha256-2T/Ylz/Y4StPwBqcvnvxS1Ntm+b4EdKTgfRw6Qe53VY=",
+        "owner": "Stengo",
+        "repo": "DeskPad",
+        "rev": "c3349f0e237e000cb4826fb3ea1cdd1c44949461",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Stengo",
+        "repo": "DeskPad",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1787736819,
+        "narHash": "sha256-cV5xEJJK3BvhU8rEd4mC9UsmDi5qscv/kzGPhBRC5WA=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "9fbb54b33e91ee4ca368e35a78e0613c720600b3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "deskpad-src": "deskpad-src",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
