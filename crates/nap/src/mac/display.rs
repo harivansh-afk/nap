@@ -8,7 +8,11 @@ use core_foundation::string::CFString;
 use core_foundation::uuid::{CFUUIDRef, CFUUID};
 use core_graphics::display::{CGDirectDisplayID, CGDisplay, CGDisplayMode};
 
-#[link(name = "CoreGraphics", kind = "framework")]
+// Declared in CGDirectDisplay.h but exported by ColorSync, not
+// CoreGraphics: the nixpkgs apple-sdk CoreGraphics.tbd has no
+// _CGDisplayCreateUUIDFromDisplayID (verified against MacOSX14.4.sdk;
+// ColorSync.tbd carries it), so linking CoreGraphics here fails.
+#[link(name = "ColorSync", kind = "framework")]
 extern "C" {
     fn CGDisplayCreateUUIDFromDisplayID(display: CGDirectDisplayID) -> CFUUIDRef;
 }
