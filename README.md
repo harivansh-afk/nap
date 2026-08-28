@@ -1,6 +1,6 @@
 # nap
 
-Not AirPlay(tm). Cast a mac onto a linux box's monitor over the LAN.
+Nap is a simple rust daemon and CLI that lets you use a linux machine as an airplay reciever
 
 A mac creates a virtual display ([DeskPad](https://github.com/Stengo/DeskPad)), [Sunshine](https://github.com/LizardByte/Sunshine) captures it and encodes VideoToolbox HEVC, and the linux box decodes with moonlight-qt fullscreen in a cage kiosk on tty1. nap is the part that makes this an appliance instead of a pile of scripts: a convergence supervisor on the mac, a receiver daemon on the linux box, and a small HTTP control plane between them. Video rides the LAN; control can ride anything, including a tailnet.
 
